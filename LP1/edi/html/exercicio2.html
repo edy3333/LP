@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Veículos</title>
+  <style>
+     body{
+            background-color: black;
+            color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            text-align: center;
+            }
+            h1{
+                text-align: center;
+            }
+  </style>
+</head>
+<body>
+  <h1>Insira o nome de cinco veículos</h1>
+  
+  <form id="veiculoForm" onsubmit="event.preventDefault(); mostrarTerceiroVeiculo();">
+    <label for="veiculo1">Veículo 1:</label>
+    <input type="text" id="veiculo1" required><br><br>
+
+    <label for="veiculo2">Veículo 2:</label>
+    <input type="text" id="veiculo2" required><br><br>
+
+    <label for="veiculo3">Veículo 3:</label>
+    <input type="text" id="veiculo3" required><br><br>
+
+    <label for="veiculo4">Veículo 4:</label>
+    <input type="text" id="veiculo4" required><br><br>
+
+    <label for="veiculo5">Veículo 5:</label>
+    <input type="text" id="veiculo5" required><br><br><button type="submit">Mostrar Terceiro Veículo</button>
+  </form><p id="resultado"></p>
+
+  <script>
+    function mostrarTerceiroVeiculo() {
+      var veiculo1 = document.getElementById('veiculo1').value;
+      var veiculo2 = document.getElementById('veiculo2').value;
+      var veiculo3 = document.getElementById('veiculo3').value;
+      var veiculo4 = document.getElementById('veiculo4').value;
+      var veiculo5 = document.getElementById('veiculo5').value;
+      document.getElementById('resultado').innerText = "O terceiro veículo é: " + veiculo3;
+    }
+  </script>
+</body>
+</html>
